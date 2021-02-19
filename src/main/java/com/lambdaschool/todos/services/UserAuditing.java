@@ -19,7 +19,7 @@ public class UserAuditing implements AuditorAware<String> {
     @Override
     public Optional<String> getCurrentAuditor() {
         String uname;
-        uname = "llama";
+        uname = "Service";
         return Optional.of(uname);
     }
 }
