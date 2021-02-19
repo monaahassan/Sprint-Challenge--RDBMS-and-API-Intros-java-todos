@@ -28,7 +28,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = TodosApplicationTests.class)
 @AutoConfigureMockMvc
-class TodosControllerIntegrationTest {
+public class TodosControllerIntegrationTest
+{
     @Autowired
     private WebApplicationContext webApplicationContext;
 
@@ -41,7 +42,8 @@ class TodosControllerIntegrationTest {
     TodosService todosService;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws Exception
+    {
         RestAssuredMockMvc.webAppContextSetup(webApplicationContext);
 
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
@@ -49,12 +51,14 @@ class TodosControllerIntegrationTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() throws Exception
+    {
     }
 
     @Test
     @Transactional
-    public void completeTodo() throws Exception {
+    public void completeTodo() throws Exception
+    {
         User newUser = new User("testUser",
                 "testpassword",
                 "test@email.com");
