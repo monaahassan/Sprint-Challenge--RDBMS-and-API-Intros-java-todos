@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = TodosApplicationTests.class)
 @AutoConfigureMockMvc
-public class TodosControllerIntegrationTest {
+class TodosControllerIntegrationTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
 
